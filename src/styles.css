@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+h1{
+    text-align: center;
+}
+
+#box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   margin-top: 30px;
+}
+table{
+    margin-top: 70px;
+    margin-left: 500px;
+}
+.g{
+    color: rgb(31, 218, 31);
+}
+.r{
+    color:rgb(168, 12, 12);
+}
+
