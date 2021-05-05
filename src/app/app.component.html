@@ -1,13 +1,11 @@
-<h1>POC</h1>
-<div id="box">
-<label for="empname">Employee Name</label>
-<input type="text"id="empname" [(ngModel)]="Empname">
-
-<label for="empnumber">Employee Number</label>
-<input type="number"id="empnumber"[(ngModel)]="Empnumber">
-<button (click)="submit()">submit</button>
+<div id="box"class="shadow-lg p-3 mb-5 bg-body rounded">
+<input type="text"[(ngModel)]="Empname"placeholder="Employee Name">
+<br>
+<input type="number"[(ngModel)]="Empnumber"placeholder="Employee Number">
+<br>
+<button (click)="submit()"class="btn btn-success btn-sm">submit</button>
 </div>
-<table border="2">
+<table border="9"class="shadow-lg p-3 mb-5 bg-body rounded">
     <tr>
         <th>S.no</th>
         <th>Empname</th>
@@ -16,7 +14,7 @@
         
     </tr>
 
-    <tr *ngFor="let item of name">
+    <tr *ngFor="let item of data">
     
     <td *ngIf="item.number%2==0"class="g">{{item.sno}}</td>
     <td *ngIf="item.number%2!=0"class="r">{{item.sno}}</td>
@@ -24,7 +22,7 @@
     <td *ngIf="item.number%2!=0"class="r">{{item.name}}</td>
     <td *ngIf="item.number%2==0"class="g">{{item.number}}</td>
     <td *ngIf="item.number%2!=0"class="r">{{item.number}}</td>
-    <td><button>delete</button></td>
+    <td><button (click)="delete(item.index)" class="btn btn-primary">delete</button></td>
 </tr>
 </table>
 
