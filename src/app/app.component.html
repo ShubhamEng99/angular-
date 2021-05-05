@@ -1,21 +1,17 @@
 <div id="box"class="shadow-lg p-3 mb-5 bg-body rounded">
-<input type="text"[(ngModel)]="Empname"placeholder="Employee Name">
-<br>
-<input type="number"[(ngModel)]="Empnumber"placeholder="Employee Number">
-<br>
+<input type="text"[(ngModel)]="Empname"placeholder="Employee Name"><br>
+<input type="number"[(ngModel)]="Empnumber"placeholder="Employee Number"><br>
 <button (click)="submit()"class="btn btn-success btn-sm">submit</button>
 </div>
+
 <table border="9"class="shadow-lg p-3 mb-5 bg-body rounded">
     <tr>
         <th>S.no</th>
         <th>Empname</th>
         <th>Empnumber</th>
         <th>Action</th>
-        
     </tr>
-
-    <tr *ngFor="let item of data">
-    
+    <tr *ngFor="let item of Empdata">
     <td *ngIf="item.number%2==0"class="g">{{item.sno}}</td>
     <td *ngIf="item.number%2!=0"class="r">{{item.sno}}</td>
     <td *ngIf="item.number%2==0"class="g">{{item.name}}</td>
@@ -25,4 +21,3 @@
     <td><button (click)="delete(item.index)" class="btn btn-primary">delete</button></td>
 </tr>
 </table>
-
