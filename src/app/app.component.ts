@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title='angular poc';
-  public Empname:any;
-  public Empnumber:any;
+  public Empname:String;
+  public Empnumber:Number;
   Empdata=[];
   Empdetails={};
   dataindex=0;
