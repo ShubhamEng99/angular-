@@ -7,32 +7,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todo';
-  Empname='';
-  Empnumber='';
-  data=[];
-  details={}
- index=0;
+  title='angular poc';
+  public Empname:any;
+  public Empnumber:any;
+  Empdata=[];
+  Empdetails={}
+  index=0;
   Sno=1;
   submit(){
-   this.details={
-      sno:this.Sno,
-      name:this.Empname,
-      number:this.Empnumber,
-      index:this.index
-}
-   this.data.push(this.details);
+   this.Empdetails={sno:this.Sno,name:this.Empname,number:this.Empnumber,index:this.index};
+   this.Empdata.push(this.Empdetails);
    this.Sno++;
    this.index++;
-}
+  }
   delete(index){
-   this.data.splice(index,1);
-   for(let i=index;i<this.data.length;i++){
-     this.data[i].index--;
-     this.data[i].sno--;
+   this.Empdata.splice(index,1);
+   for(let i=index;i<this.Empdata.length;i++){
+     this.Empdata[i].index--;
+     this.Empdata[i].sno--;
    }
-}
-}
+  }
+ }
   
   
   
