@@ -11,13 +11,10 @@
         <th>Empnumber</th>
         <th>Action</th>
     </tr>
-    <tr *ngFor="let item of Empdata">
-    <td *ngIf="item.number%2==0"class="g">{{item.sno}}</td>
-    <td *ngIf="item.number%2!=0"class="r">{{item.sno}}</td>
-    <td *ngIf="item.number%2==0"class="g">{{item.name}}</td>
-    <td *ngIf="item.number%2!=0"class="r">{{item.name}}</td>
-    <td *ngIf="item.number%2==0"class="g">{{item.number}}</td>
-    <td *ngIf="item.number%2!=0"class="r">{{item.number}}</td>
+    <tr *ngFor="let item of Empdata"[ngStyle]="{'background-color': (item.number%2==0) ? 'green' : 'red'}">
+    <td>{{item.sno}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.number}}</td>
     <td><button (click)="delete(item.index)" class="btn btn-primary">delete</button></td>
 </tr>
 </table>
