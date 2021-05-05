@@ -11,18 +11,18 @@ export class AppComponent {
   public Empname:any;
   public Empnumber:any;
   Empdata=[];
-  Empdetails={}
-  index=0;
+  Empdetails={};
+  dataindex=0;
   Sno=1;
   submit(){
-   this.Empdetails={sno:this.Sno,name:this.Empname,number:this.Empnumber,index:this.index};
+   this.Empdetails={sno:this.Sno,name:this.Empname,number:this.Empnumber,index:this.dataindex};
    this.Empdata.push(this.Empdetails);
    this.Sno++;
-   this.index++;
+   this.dataindex++;
   }
-  delete(index){
-   this.Empdata.splice(index,1);
-   for(let i=index;i<this.Empdata.length;i++){
+  delete(delindex){
+   this.Empdata.splice(delindex,1);
+   for(let i=delindex;i<this.Empdata.length;i++){
      this.Empdata[i].index--;
      this.Empdata[i].sno--;
    }
