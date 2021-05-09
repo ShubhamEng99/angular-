@@ -21,8 +21,12 @@ export class AdminloginComponent implements OnInit {
   ngOnInit(): void {}
   adminlogin(){
     if(this.adminauth.adminlogin(this.email,this.password))
-    localStorage.setItem("data",JSON.stringify(this.userauth.details))
-    this.router.navigateByUrl('admindashboard');
+    if(localStorage.getItem("data")){ 
+      this.router.navigateByUrl('admindashboard');
+    }else{
+      localStorage.setItem("data",JSON.stringify(this.userauth.details));
+      this.router.navigateByUrl('admindashboard');
     }
+  }
   }
 
