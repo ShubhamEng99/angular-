@@ -32,7 +32,7 @@ update(){
     this.userauth.details[this.currentuserindex].name=this.emname;
     this.userauth.details[this.currentuserindex].id=this.emid;
     this.userauth.details[this.currentuserindex].department=this.emdept;
-    localStorage.setItem("allusers",JSON.stringify(this.userauth.details))
+    localStorage.setItem("data",JSON.stringify(this.userauth.details))
     this.editclicked=false;
   }
 
