@@ -16,7 +16,7 @@ public EmpEmail:any;
 public EmpPass:any;
 public isclicked=false;
 details={};
-index=5;
+index=this.data.length;
   constructor(private router:Router) { }
 ngOnInit(): void {}
 add(){
