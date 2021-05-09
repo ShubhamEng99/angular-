@@ -11,7 +11,7 @@ export class UserauthService {
   details=[{name:"shubham",id:1,department:"first",email:"user1",password:"password1",index:0},{name:"vineet",id:2,department:"second",email:"user2",password:"password2",index:1},{name:"sagar",id:3,department:"first",email:"user3",password:"password3",index:2},{name:"prashant",id:4,department:"second",email:"user4",password:"password4",index:3},{name:"shyamlata",id:5,department:"first",email:"user5",password:"password5",index:4}];
 
   userlogin(id,email,password){
-    if(JSON.parse(localStorage.getItem("data"))){
+    if((localStorage.getItem("data"))){
       this.details=JSON.parse(localStorage.getItem("data"));
     }
     for(let i=0;i<this.details.length;i++){
