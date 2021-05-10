@@ -26,11 +26,11 @@ add(){
   this.index++;
   }
 delete(index){
-  this.data.splice(index,1);
-  localStorage.setItem("data",JSON.stringify(this.data));
-   for(let i=0;i<this.data.length;i++){
+ this.data.splice(delindex,1);
+  for(let i=delindex;i<this.data.length;i++){
     this.data[i].index--;
   }
+  localStorage.setItem("data",JSON.stringify(this.data));
 }
 edit(index){
   this.Empname=this.data[index].name;
