@@ -25,7 +25,7 @@ add(){
   localStorage.setItem("data",JSON.stringify(this.data));
   this.index++;
   }
-delete(index){
+delete(delindex){
  this.data.splice(delindex,1);
   for(let i=delindex;i<this.data.length;i++){
     this.data[i].index--;
