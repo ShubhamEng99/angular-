@@ -53,7 +53,7 @@ this.EmpEmail='';
 this.EmpPass='';
 }
 row(index){
-this.router.navigate(['/employeedata',this.data[index].id])
+this.router.navigate(['/employeedata',+`${this.data[index].id}`]);
 localStorage.setItem("clickeduser",JSON.stringify(this.data[index]));
 }
 }
