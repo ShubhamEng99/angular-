@@ -30,6 +30,7 @@ delete(delindex){
   for(let i=delindex;i<this.data.length;i++){
     this.data[i].index--;
   }
+   this.index=this.data.length;
   localStorage.setItem("data",JSON.stringify(this.data));
 }
 edit(index){
